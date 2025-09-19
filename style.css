@@ -1,4 +1,4 @@
-/* ========== GENERAL RESET ========== */
+/* =================== GENERAL RESET =================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,24 +6,23 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ========== BODY ========== */
+/* =================== BODY =================== */
 body {
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
   color: #333;
   line-height: 1.6;
-  min-height: 100vh;
 }
 
-/* ========== HEADER ========== */
+/* =================== HEADER =================== */
 header {
-  background: #1e3a8a;
+  background: linear-gradient(90deg, #1a73e8, #4f8ef7);
   color: #fff;
   padding: 1rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 header h1 {
@@ -35,8 +34,8 @@ header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 header nav ul li a {
@@ -50,134 +49,118 @@ header nav ul li a:hover {
   color: #facc15;
 }
 
-/* ========== SEARCH BAR ========== */
+/* =================== SEARCH BAR =================== */
 .search-container {
   text-align: center;
   margin: 1.5rem 0;
 }
 
 .search-bar {
-  width: 60%;
+  width: 50%;
   max-width: 400px;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
   border-radius: 25px;
   border: 1px solid #ccc;
   outline: none;
-  transition: box-shadow 0.3s;
+  transition: all 0.3s;
 }
 
 .search-bar:focus {
-  box-shadow: 0 0 8px rgba(30,58,138,0.5);
+  border-color: #1a73e8;
+  box-shadow: 0 0 8px rgba(26, 115, 232, 0.4);
 }
 
-/* ========== SECTIONS & HEADINGS ========== */
-main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
+/* =================== SECTIONS =================== */
 h2 {
   margin: 2rem 0 1rem;
   font-size: 1.8rem;
-  color: #1e3a8a;
+  color: #1a73e8;
   border-bottom: 3px solid #facc15;
   display: inline-block;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
 }
 
-/* ========== DOWNLOAD CARDS ========== */
-.downloads-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
+/* =================== CARDS =================== */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
+  display: block;
   background: #fff;
+  padding: 1.2rem 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
   font-weight: 500;
-  color: #1e3a8a;
+  color: #1a73e8;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   color: #facc15;
 }
 
 .card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
 }
 
-.card a {
-  margin-top: 0.5rem;
-  text-decoration: none;
-  color: #1e3a8a;
-  font-weight: bold;
-  border: 1px solid #1e3a8a;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  transition: all 0.3s;
+.card p {
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.card a:hover {
-  background: #1e3a8a;
-  color: #fff;
-}
-
-/* ========== FOOTER ========== */
+/* =================== FOOTER =================== */
 footer {
-  background: #1e3a8a;
-  color: #fff;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
   margin-top: 3rem;
+  color: #666;
+  font-size: 0.9rem;
+  background: #f0f4f8;
+  border-top: 1px solid #ccc;
 }
 
 footer a {
-  color: #facc15;
+  color: #1a73e8;
   text-decoration: none;
+  font-weight: 500;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* ========== RESPONSIVE ========== */
+/* =================== RESPONSIVE =================== */
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
     gap: 0.8rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
   .search-bar {
     width: 80%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem;
   }
 }
