@@ -222,3 +222,7 @@ body.dark-mode #darkModeToggle {
   background-color: #fff;
   color: #3498db;
 }
+
+.pdf-container.collapsed {
+  display: none;
+}
