@@ -10,192 +10,178 @@
     gtag('config', 'G-3EXV7TVH2K');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4th Semester Notes – SVIT / VTU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4th Semester Notes – Downloads</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .card { border: 1px solid #ccc; border-radius: 8px; margin: 10px 0; padding: 12px; background:#f9f9f9; }
+    .card-header { display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+    .pdf-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .pdf-card { padding:6px 10px; border:1px solid #666; border-radius:5px; text-decoration:none; color:#333; background:#fff; }
+    .pdf-card:hover { background:#e1e1e1; }
+    .hidden { display:none; }
+    .dark-mode { background:#121212; color:#e1e1e1; }
+    .dark-mode .card { background:#1e1e1e; border-color:#444; }
+    .dark-mode .pdf-card { background:#2b2b2b; color:#e1e1e1; border-color:#555; }
+    .dark-mode .pdf-card:hover { background:#3a3a3a; }
+  </style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="hero">
-  <h1>4th Semester Notes</h1>
-  <p>CSE • AI & ML • DS • ISE — Sai Vidya Institute of Technology (VTU)</p>
-  <div class="header-actions">
-    <input type="text" id="searchInput" placeholder="Search notes…" class="search-bar">
-    <button id="darkModeToggle">🌙</button>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+    <div>
+      <h1 style="margin:0">Download 4th Semester Notes</h1>
+      <p style="margin:4px 0 0 0;font-size:0.95rem;">CSE • AI &amp; ML • DS • ISE — SVIT / VTU</p>
+    </div>
+    <nav style="display:flex;gap:.75rem;align-items:center;">
+      <a href="index.html" style="color:inherit;text-decoration:none;font-weight:600;">Home</a>
+      <a href="downloads.html" style="color:inherit;text-decoration:none;font-weight:600;opacity:0.9;">Downloads</a>
+    </nav>
   </div>
-  <div style="margin-top:1rem;">
-    <a href="downloads.html" class="download-btn">📥 Download All</a>
+
+  <div class="header-actions" style="margin-top:12px;">
+    <input id="searchInput" type="text" class="search-bar" placeholder="Search any module or subject…">
+    <button id="darkModeToggle">🌙</button>
   </div>
 </header>
 
-<!-- ===== SUBJECT CARDS ===== -->
 <main>
   <section class="subjects">
 
-    <!-- ADA -->
+    <!-- Function to generate card -->
     <div class="card">
-      <i class="fas fa-project-diagram fa-3x"></i>
-      <h2>
-        Analysis & Design of Algorithms (ADA)
-        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
-      </h2>
-      <div class="pdf-container collapsed">
-        <a href="ADA/ADA-M1.pdf" class="pdf-box" target="_blank" rel="noopener">Module 1</a>
-        <a href="ADA/ADA-M2.pdf" class="pdf-box" target="_blank" rel="noopener">Module 2</a>
-        <a href="ADA/ADA-M3.pdf" class="pdf-box" target="_blank" rel="noopener">Module 3</a>
-        <a href="ADA/ADA-M4.pdf" class="pdf-box" target="_blank" rel="noopener">Module 4</a>
-        <a href="ADA/ADA-M5.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5</a>
-        <a href="ADA/ADA-M5A.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5A</a>
-        <a href="ADA/ADA-PYQ1.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ 1</a>
-        <a href="ADA/ADA-PYQ2.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ 2</a>
-        <a href="ADA/ADA-PYQ3.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ 3</a>
-        <a href="ADA/ADA-QP1.pdf" class="pdf-box" target="_blank" rel="noopener">QP 1</a>
-        <a href="ADA/ADA-MQP.pdf" class="pdf-box" target="_blank" rel="noopener">MQP</a>
+      <div class="card-header" onclick="toggleModule(this)">
+        <div><i class="fas fa-project-diagram"></i> Analysis &amp; Design of Algorithms (ADA)</div>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <a class="btn" href="ADA/">All Files</a>
+      <div class="pdf-grid hidden">
+        <a href="ADA/ADA-M1.pdf" class="pdf-card" download>Module 1</a>
+        <a href="ADA/ADA-M2.pdf" class="pdf-card" download>Module 2</a>
+        <a href="ADA/ADA-M3.pdf" class="pdf-card" download>Module 3</a>
+        <a href="ADA/ADA-M4.pdf" class="pdf-card" download>Module 4</a>
+        <a href="ADA/ADA-M5.pdf" class="pdf-card" download>Module 5</a>
+        <a href="ADA/ADA-M5A.pdf" class="pdf-card" download>Module 5A</a>
+        <a href="ADA/ADA-PYQ1.pdf" class="pdf-card" download>PYQ 1</a>
+        <a href="ADA/ADA-PYQ2.pdf" class="pdf-card" download>PYQ 2</a>
+        <a href="ADA/ADA-PYQ3.pdf" class="pdf-card" download>PYQ 3</a>
+        <a href="ADA/ADA-QP1.pdf" class="pdf-card" download>QP 1</a>
+        <a href="ADA/ADA-MQP.pdf" class="pdf-card" download>MQP</a>
+      </div>
     </div>
 
-    <!-- AI -->
     <div class="card">
-      <i class="fas fa-robot fa-3x"></i>
-      <h2>
-        Artificial Intelligence (AI)
-        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
-      </h2>
-      <div class="pdf-container collapsed">
-        <a href="AI/AI-M1.pdf" class="pdf-box" target="_blank" rel="noopener">Module 1</a>
-        <a href="AI/AI-M2.pdf" class="pdf-box" target="_blank" rel="noopener">Module 2</a>
-        <a href="AI/AI-M3.pdf" class="pdf-box" target="_blank" rel="noopener">Module 3</a>
-        <a href="AI/AI-M4.pdf" class="pdf-box" target="_blank" rel="noopener">Module 4</a>
-        <a href="AI/AI-M5.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5</a>
-        <a href="AI/AI-PYQ.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ</a>
-        <a href="AI/AI-MQP.pdf" class="pdf-box" target="_blank" rel="noopener">MQP</a>
-        <a href="AI/AI-QPS.pdf" class="pdf-box" target="_blank" rel="noopener">QPS</a>
+      <div class="card-header" onclick="toggleModule(this)">
+        <div><i class="fas fa-robot"></i> Artificial Intelligence (AI)</div>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <a class="btn" href="AI/">All Files</a>
+      <div class="pdf-grid hidden">
+        <a href="AI/AI-M1.pdf" class="pdf-card" download>Module 1</a>
+        <a href="AI/AI-M2.pdf" class="pdf-card" download>Module 2</a>
+        <a href="AI/AI-M3.pdf" class="pdf-card" download>Module 3</a>
+        <a href="AI/AI-M4.pdf" class="pdf-card" download>Module 4</a>
+        <a href="AI/AI-M5.pdf" class="pdf-card" download>Module 5</a>
+        <a href="AI/AI-PYQ.pdf" class="pdf-card" download>PYQ</a>
+        <a href="AI/AI-MQP.pdf" class="pdf-card" download>MQP</a>
+        <a href="AI/AI-QPS.pdf" class="pdf-card" download>QPS</a>
+      </div>
     </div>
 
-    <!-- BIOLOGY -->
     <div class="card">
-      <i class="fas fa-dna fa-3x"></i>
-      <h2>
-        Biology for Engineers
-        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
-      </h2>
-      <div class="pdf-container collapsed">
-        <a href="BIOLOGY/BIO-IMP-QS.pdf" class="pdf-box" target="_blank" rel="noopener">Important Questions</a>
-        <a href="BIOLOGY/BIO-M1.pdf" class="pdf-box" target="_blank" rel="noopener">Module 1</a>
-        <a href="BIOLOGY/BIO-M2.pdf" class="pdf-box" target="_blank" rel="noopener">Module 2</a>
-        <a href="BIOLOGY/BIO-M3.pdf" class="pdf-box" target="_blank" rel="noopener">Module 3</a>
-        <a href="BIOLOGY/BIO-M4.pdf" class="pdf-box" target="_blank" rel="noopener">Module 4</a>
-        <a href="BIOLOGY/BIO-M5.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5</a>
-        <a href="BIOLOGY/BIO-PYQ.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ</a>
+      <div class="card-header" onclick="toggleModule(this)">
+        <div><i class="fas fa-dna"></i> Biology for Engineers</div>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <a class="btn" href="BIOLOGY/">All Files</a>
+      <div class="pdf-grid hidden">
+        <a href="BIOLOGY/BIO-IMP-QS.pdf" class="pdf-card" download>Important Questions</a>
+        <a href="BIOLOGY/BIO-M1.pdf" class="pdf-card" download>Module 1</a>
+        <a href="BIOLOGY/BIO-M2.pdf" class="pdf-card" download>Module 2</a>
+        <a href="BIOLOGY/BIO-M3.pdf" class="pdf-card" download>Module 3</a>
+        <a href="BIOLOGY/BIO-M4.pdf" class="pdf-card" download>Module 4</a>
+        <a href="BIOLOGY/BIO-M5.pdf" class="pdf-card" download>Module 5</a>
+        <a href="BIOLOGY/BIO-PYQ.pdf" class="pdf-card" download>PYQ</a>
+      </div>
     </div>
 
-    <!-- DBMS -->
     <div class="card">
-      <i class="fas fa-database fa-3x"></i>
-      <h2>
-        Database Management Systems (DBMS)
-        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
-      </h2>
-      <div class="pdf-container collapsed">
-        <a href="DBMS/DBMS-M1.pdf" class="pdf-box" target="_blank" rel="noopener">Module 1</a>
-        <a href="DBMS/DBMS-M2.pdf" class="pdf-box" target="_blank" rel="noopener">Module 2</a>
-        <a href="DBMS/DBMS-M3.pdf" class="pdf-box" target="_blank" rel="noopener">Module 3</a>
-        <a href="DBMS/DBMS-M4.pdf" class="pdf-box" target="_blank" rel="noopener">Module 4</a>
-        <a href="DBMS/DBMS-M5.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5</a>
-        <a href="DBMS/DBMS-M5-QB.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5 QB</a>
-        <a href="DBMS/DBMS-PYQ.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ</a>
-        <a href="DBMS/DBMS-MQP.pdf" class="pdf-box" target="_blank" rel="noopener">MQP</a>
+      <div class="card-header" onclick="toggleModule(this)">
+        <div><i class="fas fa-database"></i> Database Management Systems (DBMS)</div>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <a class="btn" href="DBMS/">All Files</a>
+      <div class="pdf-grid hidden">
+        <a href="DBMS/DBMS-M1.pdf" class="pdf-card" download>Module 1</a>
+        <a href="DBMS/DBMS-M2.pdf" class="pdf-card" download>Module 2</a>
+        <a href="DBMS/DBMS-M3.pdf" class="pdf-card" download>Module 3</a>
+        <a href="DBMS/DBMS-M4.pdf" class="pdf-card" download>Module 4</a>
+        <a href="DBMS/DBMS-M5.pdf" class="pdf-card" download>Module 5</a>
+        <a href="DBMS/DBMS-M5-QB.pdf" class="pdf-card" download>Module 5 QB</a>
+        <a href="DBMS/DBMS-PYQ.pdf" class="pdf-card" download>PYQ</a>
+        <a href="DBMS/DBMS-MQP.pdf" class="pdf-card" download>MQP</a>
+      </div>
     </div>
 
-    <!-- DMS -->
     <div class="card">
-      <i class="fas fa-calculator fa-3x"></i>
-      <h2>
-        Discrete Mathematical Structures (DMS)
-        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
-      </h2>
-      <div class="pdf-container collapsed">
-        <a href="DMS/DMS-M1.pdf" class="pdf-box" target="_blank" rel="noopener">Module 1</a>
-        <a href="DMS/DMS-M2.pdf" class="pdf-box" target="_blank" rel="noopener">Module 2</a>
-        <a href="DMS/DMS-M3.pdf" class="pdf-box" target="_blank" rel="noopener">Module 3</a>
-        <a href="DMS/DMS-M4.pdf" class="pdf-box" target="_blank" rel="noopener">Module 4</a>
-        <a href="DMS/DMS-PYQ.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ 1</a>
-        <a href="DMS/DMS-PYQ2.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ 2</a>
-        <a href="DMS/DMS-PYQ3.pdf" class="pdf-box" target="_blank" rel="noopener">PYQ 3</a>
-        <a href="DMS/DMS-MQP.pdf" class="pdf-box" target="_blank" rel="noopener">MQP</a>
-        <a href="DMS/DMS-MPQ-S.pdf" class="pdf-box" target="_blank" rel="noopener">MPQ-S</a>
+      <div class="card-header" onclick="toggleModule(this)">
+        <div><i class="fas fa-calculator"></i> Discrete Mathematical Structures (DMS)</div>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <a class="btn" href="DMS/">All Files</a>
+      <div class="pdf-grid hidden">
+        <a href="DMS/DMS-M1.pdf" class="pdf-card" download>Module 1</a>
+        <a href="DMS/DMS-M2.pdf" class="pdf-card" download>Module 2</a>
+        <a href="DMS/DMS-M3.pdf" class="pdf-card" download>Module 3</a>
+        <a href="DMS/DMS-M4.pdf" class="pdf-card" download>Module 4</a>
+        <a href="DMS/DMS-PYQ.pdf" class="pdf-card" download>PYQ 1</a>
+        <a href="DMS/DMS-PYQ2.pdf" class="pdf-card" download>PYQ 2</a>
+        <a href="DMS/DMS-PYQ3.pdf" class="pdf-card" download>PYQ 3</a>
+        <a href="DMS/DMS-MQP.pdf" class="pdf-card" download>MQP</a>
+        <a href="DMS/DMS-MPQ-S.pdf" class="pdf-card" download>MPQ-S</a>
+      </div>
     </div>
 
-    <!-- UHV -->
     <div class="card">
-      <i class="fas fa-heart fa-3x"></i>
-      <h2>
-        Universal Human Values (UHV)
-        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
-      </h2>
-      <div class="pdf-container collapsed">
-        <a href="UHV/BUHK408.pdf" class="pdf-box" target="_blank" rel="noopener">Module Notes</a>
-        <a href="UHV/BUHK408-regular-paper.pdf" class="pdf-box" target="_blank" rel="noopener">Regular Paper</a>
-        <a href="UHV/UHV-IMP.pdf" class="pdf-box" target="_blank" rel="noopener">Important</a>
-        <a href="UHV/UHV-MOD-1.pdf" class="pdf-box" target="_blank" rel="noopener">Module 1</a>
-        <a href="UHV/UHV-MOD-2.pdf" class="pdf-box" target="_blank" rel="noopener">Module 2</a>
-        <a href="UHV/UHV-MOD-3.pdf" class="pdf-box" target="_blank" rel="noopener">Module 3</a>
-        <a href="UHV/UHV-MOD-4.pdf" class="pdf-box" target="_blank" rel="noopener">Module 4</a>
-        <a href="UHV/UHV-MOD-5.pdf" class="pdf-box" target="_blank" rel="noopener">Module 5</a>
+      <div class="card-header" onclick="toggleModule(this)">
+        <div><i class="fas fa-heart"></i> Universal Human Values (UHV)</div>
+        <i class="fas fa-chevron-down"></i>
       </div>
-      <a class="btn" href="UHV/">All Files</a>
+      <div class="pdf-grid hidden">
+        <a href="UHV/BUHK408.pdf" class="pdf-card" download>Module Notes</a>
+        <a href="UHV/BUHK408-regular-paper.pdf" class="pdf-card" download>Regular Paper</a>
+        <a href="UHV/BUHK408-previous-QP.pdf" class="pdf-card" download>Previous QPs</a>
+      </div>
     </div>
 
   </section>
 </main>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <p>&copy; 2025 SVIT. Developed by Hammid Bin Aejaz</p>
-</footer>
-
-<!-- ===== SCRIPTS ===== -->
 <script>
-  // Dark Mode toggle
+  // Toggle module display
+  function toggleModule(header) {
+    const grid = header.nextElementSibling;
+    grid.classList.toggle('hidden');
+    const icon = header.querySelector('.fa-chevron-down');
+    icon.classList.toggle('fa-rotate-180');
+  }
+
+  // Dark Mode
   const darkModeBtn = document.getElementById('darkModeToggle');
   darkModeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 
-  // Search filter
+  // Search Functionality
   const searchInput = document.getElementById('searchInput');
-  const pdfBoxes = document.querySelectorAll('.pdf-box');
+  const pdfCards = document.querySelectorAll('.pdf-card');
+
   searchInput.addEventListener('input', () => {
     const filter = searchInput.value.toLowerCase();
-    pdfBoxes.forEach(box => {
-      box.style.display = box.textContent.toLowerCase().includes(filter) ? 'inline-block' : 'none';
-    });
-  });
-
-  // Toggle PDF containers
-  const toggleButtons = document.querySelectorAll('.toggle-btn');
-  toggleButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const pdfContainer = btn.closest('.card').querySelector('.pdf-container');
-      pdfContainer.classList.toggle('collapsed');
-      btn.querySelector('i').classList.toggle('fa-chevron-down');
-      btn.querySelector('i').classList.toggle('fa-chevron-up');
+    pdfCards.forEach(card => {
+      card.style.display = card.textContent.toLowerCase().includes(filter) ? 'inline-block' : 'none';
     });
   });
 </script>
