@@ -226,3 +226,40 @@ body.dark-mode #darkModeToggle {
 .pdf-container.collapsed {
   display: none;
 }
+
+/* ---------- DOWNLOADS PAGE ---------- */
+
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pdf-card {
+  background: var(--card-bg, #f4f4f4);
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform .2s, background .2s, color .2s;
+}
+
+.pdf-card:hover {
+  background: #4f46e5;           /* purple hover like your home page */
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .pdf-card {
+  background: #2b2b2b;
+  color: #ddd;
+}
+body.dark-mode .pdf-card:hover {
+  background: #6366f1;
+  color: #fff;
+}
