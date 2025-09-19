@@ -1,265 +1,455 @@
 /* ===== GLOBAL STYLES ===== */
+
 body {
+
   font-family: 'Inter', sans-serif;
+
   margin: 0;
+
   padding: 0;
+
   background-color: #fdfdfd;
+
   color: #333;
+
   transition: background-color 0.3s, color 0.3s;
+
 }
+
+
 
 a {
+
   text-decoration: none;
+
   color: inherit;
+
 }
+
+
 
 h1, h2 {
+
   margin: 0 0 10px 0;
+
 }
+
+
 
 /* ===== HEADER ===== */
+
 header {
+
   background: linear-gradient(135deg, #3498db, #2980b9);
+
   color: #fff;
+
   padding: 30px 20px;
+
   text-align: center;
+
   position: relative;
+
 }
+
+
 
 .header-actions {
+
   margin-top: 15px;
+
   display: flex;
+
   justify-content: center;
+
   gap: 10px;
+
 }
+
+
 
 .search-bar {
+
   transition: width 0.3s ease, box-shadow 0.3s ease;
+
   width: 180px;
+
   padding: 6px 12px;
+
   border-radius: 20px;
+
   border: 1px solid #ccc;
+
 }
+
+
 
 .search-bar:focus {
+
   width: 250px;
+
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
   outline: none;
+
   border-color: #fff;
+
 }
+
+
 
 #darkModeToggle {
+
   cursor: pointer;
+
   transition: transform 0.2s ease, background-color 0.2s ease;
+
   padding: 6px 10px;
+
   border-radius: 50%;
+
   border: none;
+
   background-color: #fff;
+
   color: #3498db;
+
   font-size: 1rem;
+
 }
+
+
 
 #darkModeToggle:hover {
+
   transform: scale(1.2);
+
   background-color: #2980b9;
+
   color: #fff;
+
 }
+
+
 
 /* ===== MAIN CONTENT ===== */
+
 main {
+
   padding: 30px 20px;
+
 }
+
+
 
 .subjects {
+
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 25px;
+
 }
+
+
 
 /* ===== CARD STYLES ===== */
+
 .card {
+
   background-color: #fff;
+
   border-radius: 15px;
+
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
   padding: 20px;
+
   display: flex;
+
   flex-direction: column;
+
   min-height: 400px; /* uniform height */
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
+
 
 .card:hover {
+
   transform: translateY(-6px);
+
   box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+
 }
+
+
 
 .card i {
+
   color: #3498db;
+
   margin-bottom: 10px;
+
 }
+
+
 
 .card h2 {
+
   margin-bottom: 20px;
+
   font-size: 1.5rem;
+
   color: #222;
+
 }
+
+
 
 /* ===== PDF BOXES ===== */
+
 .pdf-list {
+
   flex-grow: 1;
+
   overflow-y: auto;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 8px;
+
   padding-right: 4px; /* avoid scrollbar overlap */
+
 }
+
+
 
 .pdf-box {
+
   display: flex;
+
   align-items: center;
+
   gap: 8px;
+
   background-color: #3498db;
+
   color: #fff;
+
   padding: 8px 12px;
+
   border-radius: 8px;
+
   font-size: 0.95rem;
+
   transition: background-color 0.3s, transform 0.2s;
+
 }
+
+
 
 .pdf-box:hover {
+
   background-color: #2980b9;
+
   transform: translateY(-2px);
+
 }
+
+
 
 .pdf-box i {
+
   font-size: 1.1rem;
+
 }
+
+
 
 /* Highlight search matches */
+
 .pdf-box mark {
+
   background-color: yellow;
+
   color: #000;
+
   padding: 0 2px;
+
   border-radius: 2px;
+
 }
+
+
 
 body.dark-mode .pdf-box mark {
+
   background-color: #ffc107;
+
   color: #111;
+
 }
+
+
 
 /* Scrollbar styling */
+
 .pdf-list::-webkit-scrollbar {
+
   width: 6px;
+
 }
+
+
 
 .pdf-list::-webkit-scrollbar-thumb {
+
   background-color: #3498db;
+
   border-radius: 3px;
+
 }
+
+
 
 /* ===== DOWNLOAD BUTTON ===== */
+
 .download-btn {
+
   display: inline-block;
+
   padding: 0.75rem 1.6rem;
+
   border-radius: 9999px; /* pill shape */
+
   background: linear-gradient(45deg,#4facfe,#00f2fe);
+
   color: #fff;
+
   font-weight: 600;
+
   text-decoration: none;
+
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+
   transition: transform 0.2s, box-shadow 0.2s;
+
 }
+
+
 
 .download-btn:hover {
+
   transform: translateY(-2px) scale(1.03);
+
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+
 }
+
+
 
 /* ===== FOOTER ===== */
+
 footer {
+
   text-align: center;
+
   padding: 15px 0;
+
   font-size: 0.85rem;
+
   color: #888;
+
   background-color: #f0f0f0;
+
   margin-top: 30px;
+
 }
+
+
 
 /* ===== DARK MODE ===== */
+
 body.dark-mode {
+
   background-color: #111;
+
   color: #eee;
+
 }
+
+
 
 body.dark-mode a {
+
   color: #90cdf4;
+
 }
+
+
 
 body.dark-mode .card {
+
   background-color: #2c2c2c;
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+
 }
+
+
 
 body.dark-mode .pdf-box {
+
   background-color: #2980b9;
+
   color: #fff;
+
 }
+
+
 
 body.dark-mode .pdf-box:hover {
+
   background-color: #3498db;
+
 }
+
+
 
 body.dark-mode .download-btn {
+
   background: linear-gradient(45deg,#4facfe,#00f2fe);
+
 }
+
+
 
 body.dark-mode header {
+
   background: linear-gradient(135deg, #2980b9, #3498db);
+
 }
+
+
 
 body.dark-mode #darkModeToggle {
+
   background-color: #fff;
+
   color: #3498db;
+
 }
+
+
 
 .pdf-container.collapsed {
+
   display: none;
-}
 
-/* ---------- DOWNLOADS PAGE ---------- */
-
-.pdf-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.pdf-card {
-  background: var(--card-bg, #f4f4f4);
-  padding: 0.8rem 1rem;
-  border-radius: 1rem;
-  text-align: center;
-  font-weight: 600;
-  color: #333;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform .2s, background .2s, color .2s;
-}
-
-.pdf-card:hover {
-  background: #4f46e5;           /* purple hover like your home page */
-  color: #fff;
-  transform: translateY(-4px);
-}
-
-/* Dark mode adjustments */
-body.dark-mode .pdf-card {
-  background: #2b2b2b;
-  color: #ddd;
-}
-body.dark-mode .pdf-card:hover {
-  background: #6366f1;
-  color: #fff;
 }
