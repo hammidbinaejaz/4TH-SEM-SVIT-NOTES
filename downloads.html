@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EXV7TVH2K"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,44 +12,53 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4th Semester Notes Downloads – SVIT / VTU</title>
+  <title>4th-Sem Notes – Downloads</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="hero">
-  <h1>Download 4th Semester Notes</h1>
-  <p>CSE • AI & ML • DS • ISE — Sai Vidya Institute of Technology (VTU)</p>
-  <div class="header-actions">
-    <input type="text" id="searchInput" placeholder="Search PDFs…" class="search-bar">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+    <div>
+      <h1 style="margin:0">Download 4th Semester Notes</h1>
+      <p style="margin:4px 0 0 0;font-size:0.95rem;">CSE • AI &amp; ML • DS • ISE — SVIT / VTU</p>
+    </div>
+
+    <nav style="display:flex;gap:.75rem;align-items:center;">
+      <a href="index.html" style="color:inherit;text-decoration:none;font-weight:600;">Home</a>
+      <a href="downloads.html" style="color:inherit;text-decoration:none;font-weight:600;opacity:0.9;">Downloads</a>
+    </nav>
+  </div>
+
+  <div class="header-actions" style="margin-top:12px;">
+    <input id="searchInput" type="text" class="search-bar"
+           placeholder="Search any module or subject…" />
     <button id="darkModeToggle">🌙</button>
   </div>
 </header>
 
-<!-- ===== DOWNLOAD CARDS ===== -->
 <main>
   <section class="subjects">
 
     <!-- ADA -->
     <div class="card">
       <i class="fas fa-project-diagram fa-3x"></i>
-      <h2>Analysis & Design of Algorithms (ADA)</h2>
-      <div class="pdf-container">
-        <a href="ADA/ADA-M1.pdf" class="pdf-box" download>Module 1</a>
-        <a href="ADA/ADA-M2.pdf" class="pdf-box" download>Module 2</a>
-        <a href="ADA/ADA-M3.pdf" class="pdf-box" download>Module 3</a>
-        <a href="ADA/ADA-M4.pdf" class="pdf-box" download>Module 4</a>
-        <a href="ADA/ADA-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="ADA/ADA-M5A.pdf" class="pdf-box" download>Module 5A</a>
-        <a href="ADA/ADA-PYQ1.pdf" class="pdf-box" download>PYQ 1</a>
-        <a href="ADA/ADA-PYQ2.pdf" class="pdf-box" download>PYQ 2</a>
-        <a href="ADA/ADA-PYQ3.pdf" class="pdf-box" download>PYQ 3</a>
-        <a href="ADA/ADA-QP1.pdf" class="pdf-box" download>QP 1</a>
-        <a href="ADA/ADA-MQP.pdf" class="pdf-box" download>MQP</a>
+      <h2>Analysis &amp; Design of Algorithms (ADA)</h2>
+      <div class="pdf-grid">
+        <a href="ADA/ADA-M1.pdf" class="pdf-card" download title="ADA Module 1">Module 1</a>
+        <a href="ADA/ADA-M2.pdf" class="pdf-card" download title="ADA Module 2">Module 2</a>
+        <a href="ADA/ADA-M3.pdf" class="pdf-card" download title="ADA Module 3">Module 3</a>
+        <a href="ADA/ADA-M4.pdf" class="pdf-card" download title="ADA Module 4">Module 4</a>
+        <a href="ADA/ADA-M5.pdf" class="pdf-card" download title="ADA Module 5">Module 5</a>
+        <a href="ADA/ADA-M5A.pdf" class="pdf-card" download title="ADA Module 5 Additional">Module 5A</a>
+        <a href="ADA/ADA-MQP.pdf" class="pdf-card" download title="ADA MQP">MQP</a>
+        <a href="ADA/ADA-PYQ1.pdf" class="pdf-card" download title="ADA PYQ 1">PYQ 1</a>
+        <a href="ADA/ADA-PYQ2.pdf" class="pdf-card" download title="ADA PYQ 2">PYQ 2</a>
+        <a href="ADA/ADA-PYQ3.pdf" class="pdf-card" download title="ADA PYQ 3">PYQ 3</a>
+        <a href="ADA/ADA-QP1.pdf" class="pdf-card" download title="ADA QP 1">Question Paper 1</a>
       </div>
     </div>
 
@@ -57,30 +66,30 @@
     <div class="card">
       <i class="fas fa-robot fa-3x"></i>
       <h2>Artificial Intelligence (AI)</h2>
-      <div class="pdf-container">
-        <a href="AI/AI-M1.pdf" class="pdf-box" download>Module 1</a>
-        <a href="AI/AI-M2.pdf" class="pdf-box" download>Module 2</a>
-        <a href="AI/AI-M3.pdf" class="pdf-box" download>Module 3</a>
-        <a href="AI/AI-M4.pdf" class="pdf-box" download>Module 4</a>
-        <a href="AI/AI-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="AI/AI-PYQ.pdf" class="pdf-box" download>PYQ</a>
-        <a href="AI/AI-MQP.pdf" class="pdf-box" download>MQP</a>
-        <a href="AI/AI-QPS.pdf" class="pdf-box" download>QPS</a>
+      <div class="pdf-grid">
+        <a href="AI/AI-M1.pdf" class="pdf-card" download title="AI Module 1">Module 1</a>
+        <a href="AI/AI-M2.pdf" class="pdf-card" download title="AI Module 2">Module 2</a>
+        <a href="AI/AI-M3.pdf" class="pdf-card" download title="AI Module 3">Module 3</a>
+        <a href="AI/AI-M4.pdf" class="pdf-card" download title="AI Module 4">Module 4</a>
+        <a href="AI/AI-M5.pdf" class="pdf-card" download title="AI Module 5">Module 5</a>
+        <a href="AI/AI-MQP.pdf" class="pdf-card" download title="AI MQP">MQP</a>
+        <a href="AI/AI-PYQ.pdf" class="pdf-card" download title="AI PYQ">PYQ</a>
+        <a href="AI/AI-QPS.pdf" class="pdf-card" download title="AI QPS">QPS</a>
       </div>
     </div>
 
-    <!-- BIOLOGY -->
+    <!-- Biology -->
     <div class="card">
       <i class="fas fa-dna fa-3x"></i>
       <h2>Biology for Engineers</h2>
-      <div class="pdf-container">
-        <a href="BIOLOGY/BIO-IMP-QS.pdf" class="pdf-box" download>Important Questions</a>
-        <a href="BIOLOGY/BIO-M1.pdf" class="pdf-box" download>Module 1</a>
-        <a href="BIOLOGY/BIO-M2.pdf" class="pdf-box" download>Module 2</a>
-        <a href="BIOLOGY/BIO-M3.pdf" class="pdf-box" download>Module 3</a>
-        <a href="BIOLOGY/BIO-M4.pdf" class="pdf-box" download>Module 4</a>
-        <a href="BIOLOGY/BIO-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="BIOLOGY/BIO-PYQ.pdf" class="pdf-box" download>PYQ</a>
+      <div class="pdf-grid">
+        <a href="BIOLOGY/BIO-IMP-QS.pdf" class="pdf-card" download title="Important Questions">Important Questions</a>
+        <a href="BIOLOGY/BIO-M1.pdf" class="pdf-card" download title="Biology Module 1">Module 1</a>
+        <a href="BIOLOGY/BIO-M2.pdf" class="pdf-card" download title="Biology Module 2">Module 2</a>
+        <a href="BIOLOGY/BIO-M3.pdf" class="pdf-card" download title="Biology Module 3">Module 3</a>
+        <a href="BIOLOGY/BIO-M4.pdf" class="pdf-card" download title="Biology Module 4">Module 4</a>
+        <a href="BIOLOGY/BIO-M5.pdf" class="pdf-card" download title="Biology Module 5">Module 5</a>
+        <a href="BIOLOGY/BIO-PYQ.pdf" class="pdf-card" download title="Biology PYQ">PYQ</a>
       </div>
     </div>
 
@@ -88,32 +97,32 @@
     <div class="card">
       <i class="fas fa-database fa-3x"></i>
       <h2>Database Management Systems (DBMS)</h2>
-      <div class="pdf-container">
-        <a href="DBMS/DBMS-M1.pdf" class="pdf-box" download>Module 1</a>
-        <a href="DBMS/DBMS-M2.pdf" class="pdf-box" download>Module 2</a>
-        <a href="DBMS/DBMS-M3.pdf" class="pdf-box" download>Module 3</a>
-        <a href="DBMS/DBMS-M4.pdf" class="pdf-box" download>Module 4</a>
-        <a href="DBMS/DBMS-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="DBMS/DBMS-M5-QB.pdf" class="pdf-box" download>Module 5 QB</a>
-        <a href="DBMS/DBMS-PYQ.pdf" class="pdf-box" download>PYQ</a>
-        <a href="DBMS/DBMS-MQP.pdf" class="pdf-box" download>MQP</a>
+      <div class="pdf-grid">
+        <a href="DBMS/DBMS-M1.pdf" class="pdf-card" download title="DBMS Module 1">Module 1</a>
+        <a href="DBMS/DBMS-M2.pdf" class="pdf-card" download title="DBMS Module 2">Module 2</a>
+        <a href="DBMS/DBMS-M3.pdf" class="pdf-card" download title="DBMS Module 3">Module 3</a>
+        <a href="DBMS/DBMS-M4.pdf" class="pdf-card" download title="DBMS Module 4">Module 4</a>
+        <a href="DBMS/DBMS-M5.pdf" class="pdf-card" download title="DBMS Module 5">Module 5</a>
+        <a href="DBMS/DBMS-M5-QB.pdf" class="pdf-card" download title="DBMS Module 5 Question Bank">Module 5 QB</a>
+        <a href="DBMS/DBMS-PYQ.pdf" class="pdf-card" download title="DBMS PYQ">PYQ</a>
+        <a href="DBMS/DBMS-MQP.pdf" class="pdf-card" download title="DBMS MQP">MQP</a>
       </div>
     </div>
 
     <!-- DMS -->
     <div class="card">
-      <i class="fas fa-calculator fa-3x"></i>
+      <i class="fas fa-square-root-alt fa-3x"></i>
       <h2>Discrete Mathematical Structures (DMS)</h2>
-      <div class="pdf-container">
-        <a href="DMS/DMS-M1.pdf" class="pdf-box" download>Module 1</a>
-        <a href="DMS/DMS-M2.pdf" class="pdf-box" download>Module 2</a>
-        <a href="DMS/DMS-M3.pdf" class="pdf-box" download>Module 3</a>
-        <a href="DMS/DMS-M4.pdf" class="pdf-box" download>Module 4</a>
-        <a href="DMS/DMS-PYQ.pdf" class="pdf-box" download>PYQ 1</a>
-        <a href="DMS/DMS-PYQ2.pdf" class="pdf-box" download>PYQ 2</a>
-        <a href="DMS/DMS-PYQ3.pdf" class="pdf-box" download>PYQ 3</a>
-        <a href="DMS/DMS-MQP.pdf" class="pdf-box" download>MQP</a>
-        <a href="DMS/DMS-MPQ-S.pdf" class="pdf-box" download>MPQ-S</a>
+      <div class="pdf-grid">
+        <a href="DMS/DMS-M1.pdf" class="pdf-card" download title="DMS Module 1">Module 1</a>
+        <a href="DMS/DMS-M2.pdf" class="pdf-card" download title="DMS Module 2">Module 2</a>
+        <a href="DMS/DMS-M3.pdf" class="pdf-card" download title="DMS Module 3">Module 3</a>
+        <a href="DMS/DMS-M4.pdf" class="pdf-card" download title="DMS Module 4">Module 4</a>
+        <a href="DMS/DMS-MQP.pdf" class="pdf-card" download title="DMS MQP">MQP</a>
+        <a href="DMS/DMS-PYQ.pdf" class="pdf-card" download title="DMS PYQ 1">PYQ 1</a>
+        <a href="DMS/DMS-PYQ2.pdf" class="pdf-card" download title="DMS PYQ 2">PYQ 2</a>
+        <a href="DMS/DMS-PYQ3.pdf" class="pdf-card" download title="DMS PYQ 3">PYQ 3</a>
+        <a href="DMS/DMS-MPQ-S.pdf" class="pdf-card" download title="DMS MPQ-S">MPQ-S</a>
       </div>
     </div>
 
@@ -121,45 +130,63 @@
     <div class="card">
       <i class="fas fa-heart fa-3x"></i>
       <h2>Universal Human Values (UHV)</h2>
-      <div class="pdf-container">
-        <a href="UHV/BUHK408.pdf" class="pdf-box" download>Module Notes</a>
-        <a href="UHV/BUHK408-regular-paper.pdf" class="pdf-box" download>Regular Paper</a>
-        <a href="UHV/UHV-IMP.pdf" class="pdf-box" download>Important</a>
-        <a href="UHV/UHV-MOD-1.pdf" class="pdf-box" download>Module 1</a>
-        <a href="UHV/UHV-MOD-2.pdf" class="pdf-box" download>Module 2</a>
-        <a href="UHV/UHV-MOD-3.pdf" class="pdf-box" download>Module 3</a>
-        <a href="UHV/UHV-MOD-4.pdf" class="pdf-box" download>Module 4</a>
-        <a href="UHV/UHV-MOD-5.pdf" class="pdf-box" download>Module 5</a>
+      <div class="pdf-grid">
+        <a href="UHV/BUHK408.pdf" class="pdf-card" download title="UHV Module Notes">Module Notes</a>
+        <a href="UHV/BUHK408-regular-paper.pdf" class="pdf-card" download title="UHV Regular Paper">Regular Paper</a>
+        <a href="UHV/UHV-IMP.pdf" class="pdf-card" download title="UHV Important">Important</a>
+        <a href="UHV/UHV-MOD-1.pdf" class="pdf-card" download title="UHV Module 1">Module 1</a>
+        <a href="UHV/UHV-MOD-2.pdf" class="pdf-card" download title="UHV Module 2">Module 2</a>
+        <a href="UHV/UHV-MOD-3.pdf" class="pdf-card" download title="UHV Module 3">Module 3</a>
+        <a href="UHV/UHV-MOD-4.pdf" class="pdf-card" download title="UHV Module 4">Module 4</a>
+        <a href="UHV/UHV-MOD-5.pdf" class="pdf-card" download title="UHV Module 5">Module 5</a>
       </div>
     </div>
 
   </section>
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
-  <p>&copy; 2025 SVIT. Developed by Hammid Bin Aejaz</p>
+  <p style="text-align:center;margin:12px 0 20px 0;">&copy; 2025 SVIT • Built by Hammid Bin Aejaz</p>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-  // Dark Mode toggle
-  const darkModeBtn = document.getElementById('darkModeToggle');
-  darkModeBtn.addEventListener('click', () => {
+  // Dark mode
+  const toggle = document.getElementById('darkModeToggle');
+  toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 
   // Search filter
   const searchInput = document.getElementById('searchInput');
-  const pdfBoxes = document.querySelectorAll('.pdf-box');
+  const pdfCards = document.querySelectorAll('.pdf-card');
+
   searchInput.addEventListener('input', () => {
-    const filter = searchInput.value.toLowerCase();
-    pdfBoxes.forEach(box => {
-      box.style.display = box.textContent.toLowerCase().includes(filter) ? 'inline-block' : 'none';
+    const val = searchInput.value.trim().toLowerCase();
+    let anyVisible = false;
+    pdfCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (val === '' || text.includes(val)) {
+        card.style.display = '';
+        anyVisible = true;
+      } else {
+        card.style.display = 'none';
+      }
     });
+
+    // Optional: show "no results" message
+    let noMsg = document.getElementById('noResultsMsg');
+    if (!noMsg) {
+      noMsg = document.createElement('div');
+      noMsg.id = 'noResultsMsg';
+      noMsg.style.margin = '1rem';
+      noMsg.style.fontStyle = 'italic';
+      noMsg.style.color = 'var(--muted, #666)';
+      noMsg.textContent = 'No PDFs match your search.';
+      document.querySelector('.subjects').appendChild(noMsg);
+    }
+    noMsg.style.display = anyVisible ? 'none' : '';
   });
 </script>
-
 </body>
 </html>
