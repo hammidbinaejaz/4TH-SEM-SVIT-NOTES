@@ -1,54 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4th-Sem SVIT Notes</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EXV7TVH2K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3EXV7TVH2K');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4th Semester Notes – SVIT / VTU</title>
+
+  <!-- Font & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>4th-Sem SVIT Notes</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="downloads.html#ADA">ADA</a></li>
-        <li><a href="downloads.html#ADA-Lab">ADA-Lab</a></li>
-        <li><a href="downloads.html#AI">AI</a></li>
-        <li><a href="downloads.html#BIOLOGY">Biology</a></li>
-        <li><a href="downloads.html#DBMS">DBMS</a></li>
-        <li><a href="downloads.html#DMS">DMS</a></li>
-        <li><a href="downloads.html#UHV">UHV</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="intro">
-      <h2>Welcome to 4th-Sem SVIT Notes</h2>
-      <p>Find all lecture notes, previous year questions, and lab manuals here.</p>
-      <a class="btn" href="downloads.html">Go to Downloads</a>
-    </section>
+<!-- ===== HEADER ===== -->
+<header class="hero">
+  <h1>4th Semester Notes</h1>
+  <p>CSE • AI & ML • DS • ISE — Sai Vidya Institute of Technology (VTU)</p>
+  <div class="header-actions">
+    <input type="text" id="searchInput" placeholder="Search notes…" class="search-bar">
+    <button id="darkModeToggle">🌙</button>
+  </div>
+  <div style="margin-top:1rem;">
+    <a href="downloads.html" class="download-btn">📥 Download All</a>
+  </div>
+</header>
 
-    <section class="subjects-overview">
-      <h2>Subjects</h2>
-      <div class="card-container">
-        <a class="card" href="downloads.html#ADA"><h3>ADA</h3><p>Analysis & Design of Algorithms</p></a>
-        <a class="card" href="downloads.html#ADA-Lab"><h3>ADA-Lab</h3><p>Lab Programs</p></a>
-        <a class="card" href="downloads.html#AI"><h3>AI</h3><p>Artificial Intelligence</p></a>
-        <a class="card" href="downloads.html#BIOLOGY"><h3>Biology</h3><p>Biology for Engineers</p></a>
-        <a class="card" href="downloads.html#DBMS"><h3>DBMS</h3><p>Database Management Systems</p></a>
-        <a class="card" href="downloads.html#DMS"><h3>DMS</h3><p>Data Management Systems</p></a>
-        <a class="card" href="downloads.html#UHV"><h3>UHV</h3><p>Universal Human Values</p></a>
-      </div>
-    </section>
-  </main>
+<!-- ===== SUBJECT CARDS ===== -->
+<main>
+<section class="subjects">
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 SVIT. All rights reserved.</p>
-      <p>Developed by <a href="https://github.com/hammidbinaejaz">hammidbinaejaz</a></p>
+  <!-- ADA -->
+  <div class="card">
+    <i class="fas fa-project-diagram fa-3x"></i>
+    <h2>Analysis & Design of Algorithms (ADA)</h2>
+    <div class="pdf-container">
+      <a href="ADA/Module-1.pdf" class="pdf-box" download>Module 1</a>
+      <a href="ADA/Module-2.pdf" class="pdf-box" download>Module 2</a>
+      <a href="ADA/Module-3.pdf" class="pdf-box" download>Module 3</a>
+      <a href="ADA/Module-4.pdf" class="pdf-box" download>Module 4</a>
+      <a href="ADA/Module-5.pdf" class="pdf-box" download>Module 5</a>
+      <a href="ADA/QuestionBank.pdf" class="pdf-box" download>Question Bank</a>
     </div>
-  </footer>
+    <a class="btn" href="ADA/">All Files</a>
+  </div>
+
+  <!-- ADA LAB -->
+  <div class="card">
+    <i class="fas fa-laptop-code fa-3x"></i>
+    <h2>ADA Laboratory</h2>
+    <div class="pdf-container">
+      <a href="ADA-LAB/Programs.pdf" class="pdf-box" download>Programs</a>
+      <a href="ADA-LAB/Manual.pdf" class="pdf-box" download>Manual</a>
+    </div>
+    <a class="btn" href="ADA-LAB/">All Files</a>
+  </div>
+
+  <!-- Artificial Intelligence -->
+  <div class="card">
+    <i class="fas fa-robot fa-3x"></i>
+    <h2>Artificial Intelligence (AI)</h2>
+    <div class="pdf-container">
+      <a href="AI/Module-1.pdf" class="pdf-box" download>Module 1</a>
+      <a href="AI/Module-2.pdf" class="pdf-box" download>Module 2</a>
+      <a href="AI/Module-3.pdf" class="pdf-box" download>Module 3</a>
+      <a href="AI/Module-4.pdf" class="pdf-box" download>Module 4</a>
+      <a href="AI/Module-5.pdf" class="pdf-box" download>Module 5</a>
+      <a href="AI/QuestionBank.pdf" class="pdf-box" download>Question Bank</a>
+    </div>
+    <a class="btn" href="AI/">All Files</a>
+  </div>
+
+  <!-- Biology for Engineers -->
+  <div class="card">
+    <i class="fas fa-dna fa-3x"></i>
+    <h2>Biology for Engineers</h2>
+    <div class="pdf-container">
+      <a href="BIOLOGY/Module-1.pdf" class="pdf-box" download>Module 1</a>
+      <a href="BIOLOGY/Module-2.pdf" class="pdf-box" download>Module 2</a>
+      <a href="BIOLOGY/Module-3.pdf" class="pdf-box" download>Module 3</a>
+      <a href="BIOLOGY/Module-4.pdf" class="pdf-box" download>Module 4</a>
+      <a href="BIOLOGY/Module-5.pdf" class="pdf-box" download>Module 5</a>
+      <a href="BIOLOGY/QuestionBank.pdf" class="pdf-box" download>Question Bank</a>
+    </div>
+    <a class="btn" href="BIOLOGY/">All Files</a>
+  </div>
+
+  <!-- DBMS -->
+  <div class="card">
+    <i class="fas fa-database fa-3x"></i>
+    <h2>Database Management Systems (DBMS)</h2>
+    <div class="pdf-container">
+      <a href="DBMS/Module-1.pdf" class="pdf-box" download>Module 1</a>
+      <a href="DBMS/Module-2.pdf" class="pdf-box" download>Module 2</a>
+      <a href="DBMS/Module-3.pdf" class="pdf-box" download>Module 3</a>
+      <a href="DBMS/Module-4.pdf" class="pdf-box" download>Module 4</a>
+      <a href="DBMS/Module-5.pdf" class="pdf-box" download>Module 5</a>
+      <a href="DBMS/QuestionBank.pdf" class="pdf-box" download>Question Bank</a>
+    </div>
+    <a class="btn" href="DBMS/">All Files</a>
+  </div>
+
+  <!-- Discrete Mathematical Structures -->
+  <div class="card">
+    <i class="fas fa-square-root-alt fa-3x"></i>
+    <h2>Discrete Mathematical Structures (DMS)</h2>
+    <div class="pdf-container">
+      <a href="DMS/Module-1.pdf" class="pdf-box" download>Module 1</a>
+      <a href="DMS/Module-2.pdf" class="pdf-box" download>Module 2</a>
+      <a href="DMS/Module-3.pdf" class="pdf-box" download>Module 3</a>
+      <a href="DMS/Module-4.pdf" class="pdf-box" download>Module 4</a>
+      <a href="DMS/Module-5.pdf" class="pdf-box" download>Module 5</a>
+      <a href="DMS/QuestionBank.pdf" class="pdf-box" download>Question Bank</a>
+    </div>
+    <a class="btn" href="DMS/">All Files</a>
+  </div>
+
+  <!-- Universal Human Values -->
+  <div class="card">
+    <i class="fas fa-heart fa-3x"></i>
+    <h2>Universal Human Values (UHV)</h2>
+    <div class="pdf-container">
+      <a href="UHV/Module-1.pdf" class="pdf-box" download>Module 1</a>
+      <a href="UHV/Module-2.pdf" class="pdf-box" download>Module 2</a>
+      <a href="UHV/Module-3.pdf" class="pdf-box" download>Module 3</a>
+      <a href="UHV/Module-4.pdf" class="pdf-box" download>Module 4</a>
+      <a href="UHV/Module-5.pdf" class="pdf-box" download>Module 5</a>
+      <a href="UHV/QuestionBank.pdf" class="pdf-box" download>Question Bank</a>
+    </div>
+    <a class="btn" href="UHV/">All Files</a>
+  </div>
+
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; 2025 SVIT. Developed by Hammid Bin Aejaz</p>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Dark Mode toggle
+  const darkModeBtn = document.getElementById('darkModeToggle');
+  darkModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+
+  // Search filter
+  const searchInput = document.getElementById('searchInput');
+  const pdfBoxes = document.querySelectorAll('.pdf-box');
+  searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase();
+    pdfBoxes.forEach(box => {
+      box.style.display = box.textContent.toLowerCase().includes(filter) ? 'inline-block' : 'none';
+    });
+  });
+</script>
 </body>
 </html>
