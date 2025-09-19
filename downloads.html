@@ -1,166 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4th Semester Notes – SVIT / VTU</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    a { text-decoration: none; color: inherit; }
-    header { background: linear-gradient(135deg, #3498db, #2980b9); color: #fff; padding: 30px 20px; text-align: center; }
-    .header-actions { margin-top: 15px; display: flex; justify-content: center; gap: 10px; }
-    .search-bar { transition: width 0.3s ease, box-shadow 0.3s ease; width: 180px; padding: 6px 10px; border-radius: 20px; border: 1px solid #ccc; }
-    .search-bar:focus { width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); outline: none; border-color: #fff; }
-    #darkModeToggle { cursor: pointer; transition: transform 0.2s ease; padding: 6px 10px; border-radius: 50%; border: none; background-color: #fff; color: #3498db; }
-    #darkModeToggle:hover { transform: scale(1.2); background-color: #2980b9; color: #fff; }
-
-    main { padding: 30px 20px; }
-    .subjects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-
-    .card { background-color: #fff; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
-    .card i { color: #3498db; margin-bottom: 10px; }
-    .card h2 { margin-bottom: 10px; font-size: 1.4rem; color: #222; }
-
-    .pdf-list { flex-grow: 1; max-height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
-    .pdf-box { display: flex; align-items: center; gap: 5px; background-color: #3498db; color: #fff; padding: 6px 10px; border-radius: 8px; font-size: 0.9rem; transition: background-color 0.3s, transform 0.2s; }
-    .pdf-box:hover { background-color: #2980b9; transform: translateY(-2px); }
-    .pdf-box i { font-size: 1rem; }
-
-    footer { text-align: center; padding: 12px 0; font-size: 0.8rem; color: #888; background-color: #f0f0f0; }
-
-    body.dark-mode { background-color: #111; color: #eee; }
-    body.dark-mode a { color: #90cdf4; }
-    body.dark-mode .card { background-color: #2c2c2c; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
-    body.dark-mode .pdf-box { background-color: #2980b9; color: #fff; }
-    body.dark-mode .pdf-box:hover { background-color: #3498db; }
-    body.dark-mode .btn { background-color: #27ae60; }
-    body.dark-mode .btn:hover { background-color: #2ecc71; }
-    body.dark-mode header { background: linear-gradient(135deg, #2980b9, #3498db); }
-    body.dark-mode #darkModeToggle { background-color: #fff; color: #3498db; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4th-Sem SVIT Notes – Downloads</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>4th Semester Notes – SVIT / VTU</h1>
-    <div class="header-actions">
-      <input type="text" id="searchInput" placeholder="Search notes..." class="search-bar">
-      <button id="darkModeToggle">🌙</button>
+  <header class="site-header">
+    <div class="container">
+      <h1>4th-Sem SVIT Notes</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="downloads.html" class="active">Downloads</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Main Section -->
-  <main>
-    <div class="subjects">
+  <main class="container">
+    <h2 class="page-title">All PDF Downloads</h2>
 
-      <!-- ADA -->
-      <div class="card">
-        <i class="fas fa-project-diagram fa-2x"></i>
-        <h2>Analysis & Design of Algorithms (ADA)</h2>
-        <div class="pdf-list">
-          <a href="ADA/sample.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> ADA Notes</a>
-        </div>
-      </div>
+    <section class="downloads">
+      <!-- === ADA === -->
+      <h2>ADA</h2>
+      <a href="ADA/ADA-M1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1</a>
+      <a href="ADA/ADA-M2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+      <a href="ADA/ADA-M3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3</a>
+      <a href="ADA/ADA-M4.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4</a>
+      <a href="ADA/ADA-M5.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5</a>
+      <a href="ADA/ADA-M5A.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5 Additional</a>
+      <a href="ADA/ADA-PYQ1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> PYQ 1</a>
+      <a href="ADA/ADA-PYQ2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> PYQ 2</a>
+      <a href="ADA/ADA-PYQ3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> PYQ 3</a>
+      <a href="ADA/ADA-QP1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Question Paper 1</a>
+      <a href="ADA/ADA-MQP.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Mini Project Questions</a>
+      <a href="ADA/ADA-BOOK-PADMA:SIR.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Textbook – Padma Sir</a>
 
-      <!-- Artificial Intelligence -->
-      <div class="card">
-        <i class="fas fa-robot fa-2x"></i>
-        <h2>Artificial Intelligence (AI)</h2>
-        <div class="pdf-list">
-          <a href="AI/sample.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> AI Notes</a>
-        </div>
-      </div>
+      <!-- === AI === -->
+      <h2>AI</h2>
+      <a href="AI/AI-M1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1</a>
+      <a href="AI/AI-M2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+      <a href="AI/AI-M3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3</a>
+      <a href="AI/AI-M4.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4</a>
+      <a href="AI/AI-M5.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5</a>
+      <a href="AI/AI-PYQ.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Previous Year Questions</a>
+      <a href="AI/AI-MQP.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Mini Project Questions</a>
+      <a href="AI/AI%20Question%20papers.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> All Question Papers</a>
 
-      <!-- Biology for Engineers -->
-      <div class="card">
-        <i class="fas fa-dna fa-2x"></i>
-        <h2>Biology for Engineers</h2>
-        <div class="pdf-list">
-          <a href="BIOLOGY/sample.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Biology Notes</a>
-        </div>
-      </div>
+      <!-- === Biology === -->
+      <h2>Biology</h2>
+      <a href="BIOLOGY/BIO-M1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1</a>
+      <a href="BIOLOGY/BIO-M2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+      <a href="BIOLOGY/BIO-M3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3</a>
+      <a href="BIOLOGY/BIO-M4.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4</a>
+      <a href="BIOLOGY/BIO-M5.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5</a>
+      <a href="BIOLOGY/BIO-PYQ.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Previous Year Questions</a>
+      <a href="BIOLOGY/BIO-IMP-Q'S.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Important Questions</a>
 
-      <!-- Database Management Systems -->
-      <div class="card">
-        <i class="fas fa-database fa-2x"></i>
-        <h2>Database Management Systems (DBMS)</h2>
-        <div class="pdf-list">
-          <a href="DBMS/sample.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> DBMS Notes</a>
-        </div>
-      </div>
+      <!-- === DBMS === -->
+      <h2>DBMS</h2>
+      <a href="DBMS/DBMS-M1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1</a>
+      <a href="DBMS/DBMS-M2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+      <a href="DBMS/DBMS-M3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3</a>
+      <a href="DBMS/DBMS-M4.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4</a>
+      <a href="DBMS/DBMS-M5.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5</a>
+      <a href="DBMS/DBMS-M5-QB.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5 Question Bank</a>
+      <a href="DBMS/DBMS-PYQ.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Previous Year Questions</a>
+      <a href="DBMS/DBMS-MQP.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Mini Project Questions</a>
 
-      <!-- Discrete Mathematical Structures -->
-      <div class="card">
-        <i class="fas fa-superscript fa-2x"></i>
-        <h2>Discrete Mathematical Structures (DMS)</h2>
-        <div class="pdf-list">
-          <a href="DMS/sample.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> DMS Notes</a>
-        </div>
-      </div>
+      <!-- === DMS === -->
+      <h2>DMS</h2>
+      <a href="DMS/DMS-M1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1</a>
+      <a href="DMS/DMS-M2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+      <a href="DMS/DMS-M3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3</a>
+      <a href="DMS/DMS-M4.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4</a>
+      <a href="DMS/DMS-PYQ.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> PYQ 1</a>
+      <a href="DMS/DMS-PYQ2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> PYQ 2</a>
+      <a href="DMS/DMS-PYQ3.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> PYQ 3</a>
+      <a href="DMS/DMS-MQP.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Mini Project Questions</a>
+      <a href="DMS/%20DMS-MPQ-S.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Special Mini Project Qs</a>
 
-      <!-- Universal Human Values -->
-      <div class="card">
-        <i class="fas fa-heart fa-2x"></i>
-        <h2>Universal Human Values (UHV)</h2>
-        <div class="pdf-list">
-          <a href="UHV/sample.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> UHV Notes</a>
-        </div>
-      </div>
-
-    </div>
+      <!-- === UHV === -->
+      <h2>UHV</h2>
+      <a href="UHV/BUHK408.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module Notes</a>
+      <a href="UHV/BUHK408-regular-paper.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Regular Question Paper</a>
+      <a href="UHV/UHV-mod-01.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1</a>
+      <a href="UHV/UHV%20mod%2002%20.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+      <a href="UHV/UHV%20mod%2003%20.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3</a>
+      <a href="UHV/UHV%20mod%2004%20.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4</a>
+      <a href="UHV/UHV%20mod%2005%20.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5</a>
+      <a href="UHV/uhv%20simp.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Simplified Notes</a>
+    </section>
   </main>
 
-  <footer>
-    Made with ❤️ by Hammid Bin Aejaz
+  <footer class="site-footer">
+    <p>&copy; 2025 SVIT. All rights reserved. Developed by hammidbinaejaz</p>
   </footer>
 
-  <script>
-    // Dark Mode Toggle
-    const darkModeBtn = document.getElementById('darkModeToggle');
-    darkModeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-
-    // Search functionality
-    const searchInput = document.getElementById('searchInput');
-    const pdfBoxes = document.querySelectorAll('.pdf-box');
-    searchInput.addEventListener('input', () => {
-      const filter = searchInput.value.toLowerCase();
-      pdfBoxes.forEach(box => {
-        const text = box.textContent.toLowerCase();
-        box.parentElement.style.display = text.includes(filter) ? 'flex' : 'none';
-      });
-    });
-
-    // Download confirmation popup
-    const pdfLinks = document.querySelectorAll('.pdf-box');
-    pdfLinks.forEach(link => {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const url = this.getAttribute('href');
-        const confirmed = confirm(`Do you want to download "${this.textContent.trim()}"?`);
-        if (confirmed) {
-          window.location.href = url;
-        }
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
