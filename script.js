@@ -1,32 +1,24 @@
-console.log("4th Sem Notes Site Loaded!");
-
-// ===== Dark Mode Toggle =====
-const darkModeBtn = document.getElementById('darkModeToggle');
-darkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+// ========== SMOOTH SCROLL ==========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
 
-// ===== Search Filter =====
-const searchBar = document.getElementById('searchBar');
-const subjectCards = document.querySelectorAll('.subject-card');
+// ========== SEARCH FILTER ==========
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
 
-searchBar.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-
-    subjectCards.forEach(card => {
-        const subject = card.dataset.subject.toLowerCase();
-        const pdfLinks = Array.from(card.querySelectorAll('li a'));
-        let matchFound = false;
-
-        pdfLinks.forEach(link => {
-            if (link.textContent.toLowerCase().includes(query)) {
-                link.style.display = 'inline-block';
-                matchFound = true;
-            } else {
-                link.style.display = 'none';
-            }
-        });
-
-        card.style.display = matchFound ? 'block' : 'none';
+if(searchInput) {
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(query) ? 'block' : 'none';
     });
-});
+  });
+}
