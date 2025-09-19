@@ -1,0 +1,606 @@
+//Dijkstra Algorithm
+
+#include <stdio.h>
+#include <limits.h>
+#define V 5
+
+int minDistance(int dist[], int visited[])
+{
+	int min = INT_MAX, index = -1;
+	for (int v = 0; v < V; v++)
+		if (!visited[v] && dist[v] <= min)
+			min = dist[v], index = v;
+	return index;
+}
+void dijkstra(int graph[V][V], int src)
+{
+	int dist[V], visited[V] = {0};
+	for (int i = 0; i < V; i++)
+		dist[i] = INT_MAX;
+	dist[src] = 0;
+	for (int count = 0; count < V - 1; count++)
+	{
+		int u = minDistance(dist, visited);
+		visited[u] = 1;
+		for (int v = 0; v < V; v++)
+			if (!visited[v] && graph[u][v] && dist[u] + graph[u][v] < dist[v])
+				dist[v] = dist[u] + graph[u][v];
+	}
+	printf("Vertex \tDistance from Source %d\n", src);
+	for (int i = 0; i < V; i++)
+		printf("%d \t\t%d\n", i, dist[i]);
+}
+int main()
+{
+	int graph[V][V] = {
+		{0, 10, 0, 0, 5},
+		{0, 0, 1, 0, 2},
+		{0, 0, 0, 4, 0},
+		{7, 0, 6, 0, 0},
+		{0, 3, 9, 2, 0}
+	};
+	dijkstra(graph, 0);
+	return 0;
+}
+
+
+
+
+
+// Knapsack Problem
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct
+{
+	int weight, value;
+	double ratio;
+} Item;
+int cmp(const void *a, const void *b)
+{
+	return ((Item *)b)->ratio > ((Item *)a)->ratio ? 1 : -1;
+}
+int discreteKnapsack(Item *items, int n, int cap)
+{
+	qsort(items, n, sizeof(Item), cmp);
+	int val = 0, w = 0;
+	for (int i = 0; i < n && w < cap; i++)
+		if (w + items[i].weight <= cap)
+			w += items[i].weight, val += items[i].value;
+	return val;
+}
+double fractionalKnapsack(Item *items, int n, int cap)
+{
+	qsort(items, n, sizeof(Item), cmp);
+	double val = 0.0;
+	int w = 0;
+	for (int i = 0; i < n && w < cap; i++)
+	{
+		if (w + items[i].weight <= cap)
+			w += items[i].weight, val += items[i].value;
+		else
+		{
+			val += items[i].ratio * (cap - w);
+			break;
+		}
+	}
+	return val;
+}
+int main()
+{
+	int n, cap;
+	printf("Enter number of items and knapsack capacity: ");
+	scanf("%d %d", &n, &cap);
+	Item *items = malloc(n * sizeof(Item));
+	printf("Enter weight and value of each item:\n");
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%d %d", &items[i].weight, &items[i].value);
+		items[i].ratio = (double)items[i].value / items[i].weight;
+	}
+	printf("Approximate (0/1) Knapsack value: %d\n", discreteKnapsack(items, n, cap));
+	printf("Exact (Fractional) Knapsack value: %.2f\n",
+		fractionalKnapsack(items, n, cap));
+	free(items);
+	return 0;
+}
+
+
+
+
+
+// Floyds Algorithm
+
+#include <stdio.h>
+#define V 4
+#define INF 99999 // Represents infinity
+	// Function to print the final shortest distance matrix
+void printSolution(int dist[V][V])
+{
+	int i, j;
+	printf("Shortest distances between every pair of vertices:\n");
+	for (i = 0; i < V; i++)
+	{
+		for (j = 0; j < V; j++)
+		{
+			if (dist[i][j] == INF)
+				printf("%7s", "INF");
+			else
+				printf("%7d", dist[i][j]);
+		}
+		printf("\n");
+	}
+}
+void floydWarshall(int graph[V][V])
+{
+	int dist[V][V];
+	int i, j, k;
+	// Step 1: Initialize distance matrix with input graph
+	for (i = 0; i < V; i++)
+	{
+		for (j = 0; j < V; j++)
+		{
+			dist[i][j] = graph[i][j];
+		}
+	}
+	// Step 2: Update the shortest paths
+	for (k = 0; k < V; k++)
+	{
+		for (i = 0; i < V; i++)
+		{
+			for (j = 0; j < V; j++)
+			{
+				if (dist[i][k] + dist[k][j] < dist[i][j])
+				{
+					dist[i][j] = dist[i][k] + dist[k][j];
+				}
+			}
+		}
+	}
+	// Step 3: Print the result
+	printSolution(dist);
+}
+int main()
+{
+	// Example graph represented as adjacency matrix
+	int graph[V][V] = {
+		{0, INF, 3, INF},
+		{2, 0, INF, INF},
+		{INF, 7, 0, 1},
+		{6, INF, INF, 0}
+	};
+	floydWarshall(graph);
+	return 0;
+}
+
+
+
+
+
+// Warshalls Algorithm
+
+#include <stdio.h>
+#define V 4 // Number of vertices
+
+// Function to print the transitive closure matrix
+void printMatrix(int reach[V][V])
+{
+	printf("Transitive Closure of the given graph:\n");
+	for (int i = 0; i < V; i++)
+	{
+		for (int j = 0; j < V; j++)
+		{
+			printf("%d ", reach[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+// Warshall’s Algorithm to compute transitive closure
+void warshall(int graph[V][V])
+{
+	int reach[V][V];
+	// Step 1: Initialize reachability matrix with input graph
+	for (int i = 0; i < V; i++)
+		for (int j = 0; j < V; j++)
+			reach[i][j] = (graph[i][j] != 0) ? 1 : 0;
+	// Step 2: Apply Warshall’s algorithm
+	for (int k = 0; k < V; k++)
+		for (int i = 0; i < V; i++)
+			for (int j = 0; j < V; j++)
+				reach[i][j] = reach[i][j] || (reach[i][k] && reach[k][j]);
+	// Step 3: Print result
+	printMatrix(reach);
+}
+int main()
+{
+	int graph[V][V] = {
+		{0, 1, 0, 0},
+		{0, 0, 0, 1},
+		{0, 0, 0, 0},
+		{1, 0, 1, 0}
+	};
+	warshall(graph);
+	return 0;
+}
+
+
+
+
+
+
+// Sum of Subset
+
+#include <stdio.h>
+int s[10], set[10], n, d, count = 0, flag = 0;
+void display(int count)
+{
+	printf("\t{ ");
+	for (int i = 0; i < count; i++)
+		printf("%d ", set[i]);
+	printf("}\n");
+}
+void subset(int sum, int i)
+{
+	if (sum == d)
+	{
+		flag = 1;
+		display(count);
+		return;
+	}
+	if (sum > d || i >= n)
+		return;
+	set[count++] = s[i];
+	subset(sum + s[i], i + 1);
+	count--;
+	subset(sum, i + 1);
+}
+int main()
+{
+	printf("Enter total no. of elements: ");
+	scanf("%d", &n);
+	printf("Enter set values: ");
+	for (int i = 0; i < n; i++)
+		scanf("%d", &s[i]);
+	printf("Enter sum: ");
+	scanf("%d", &d);
+	printf("Subsets:\n");
+	subset(0, 0);
+	if (!flag)
+		printf("No solution exists.\n");
+	return 0;
+}
+
+
+
+
+
+
+// N Queens Problem
+
+#include <stdio.h>
+#include <stdlib.h>
+int count = 0;
+// Function to print the board with one solution
+void printSolution(int x[], int n)
+{
+	printf("Solution %d:\n", ++count);
+	for (int i = 0; i < n; i++, printf("\n"))
+		for (int j = 0; j < n; j++)
+		printf(x[i] == j ? "Q " : "X ");
+}
+// Function to check if placing queen at (row, col) is valid
+int isValid(int x[], int row, int col)
+{
+	for (int i = 0; i < row; i++)
+		if (x[i] == col || abs(row - i) == abs(col - x[i]))
+			return 0; // Not valid if same column or diagonal
+	return 1;
+}
+// Backtracking function to place queens
+void solveNQueens(int n, int x[], int row)
+{
+	if (row == n)
+	{
+		printSolution(x, n);
+		return;
+	}
+	for (int col = 0; col < n; col++)
+	{
+		if (isValid(x, row, col))
+		{
+			x[row] = col; // Place queen
+			solveNQueens(n, x, row + 1); // Move to next row
+			// No need to undo x[row], it will be overwritten in the loop
+		}
+	}
+}
+int main()
+{
+	int n;
+	printf("Enter number of queens: ");
+	scanf("%d", &n);
+	if (n <= 0)
+	{
+		printf("Invalid input!\n");
+		return 1;
+	}
+	int board[15] = {0}; // Supports up to 15 queens
+	solveNQueens(n, board, 0);
+	if (count)
+		printf("\nTotal Solutions: %d\n", count);
+	else
+		printf("No Solution!\n");
+	return 0;
+}
+
+
+
+
+
+
+//Merge Sort
+
+#include<stdio.h>
+void merge(int a[], int low, int mid, int high)
+{
+	int i=low, j=mid+1, k=0;
+	int temp[100];
+	while(i<=mid && j<=high)
+	{
+		if(a[i]<=a[j])
+			temp[k++] = a[i++];
+		else
+			temp[k++] = a[j++];
+	}
+	while(i<=mid)
+	{
+		temp[k++] = a[i++];
+	}
+	while(j<=high)
+	{
+		temp[k++] = a[j++];
+	}
+	for(i=low,k=0;i<=high;i++)
+	{
+		a[i] = temp[k++];
+	}
+}
+void MergeSort(int a[], int low, int high)
+{
+	if (low>=high) return;
+	int mid = (low+high)/2;
+	MergeSort(a,low,mid);
+	MergeSort(a,mid+1,high);
+	merge(a,low,mid,high);
+}
+void main()
+{
+	int a[100], n;
+	printf("Enter the number of elements in the array : ");
+	scanf("%d",&n);
+	printf("Enter the elements of the array : ");
+	for(int i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	MergeSort(a,0,n-1);
+	printf("The array after sorting is : ");
+	for(int i=0;i<n;i++)
+		printf("%d ",a[i]);
+	printf("\n");
+}
+
+
+
+
+
+// Prims Algorithm
+
+#include <stdio.h>
+#include <limits.h>
+#define V 5 // Number of vertices
+// Function to find the vertex with the minimum key value
+int minKey(int key[], int mstSet[]) 
+{
+	int min = INT_MAX, min_index = -1;
+	for (int v = 0; v < V; v++)
+		if (!mstSet[v] && key[v] < min)
+			min = key[v], min_index = v;
+	return min_index;
+}
+// Function to construct and print MST using Prim’s algorithm
+void primMST(int graph[V][V]) 
+{
+	int parent[V]; // Stores MST
+	int key[V]; // Used to pick minimum weight edge
+	int mstSet[V] = {0}; // mstSet[i] will be true if vertex i is included in MST
+	int cost = 0; // Total cost of MST
+	// Initialize all keys as infinite
+	for (int i = 0; i < V; i++)
+		key[i] = INT_MAX;
+	key[0] = 0; // Start from first vertex
+	parent[0] = -1; // First node is always root of MST
+	// MST will have V vertices
+	for (int count = 0; count < V - 1; count++)
+	{	
+		int u = minKey(key, mstSet);
+		mstSet[u] = 1;
+		// Update key and parent for adjacent vertices of the picked vertex
+		for (int v = 0; v < V; v++) 
+		{
+			if (graph[u][v] && !mstSet[v] && graph[u][v] < key[v]) 
+			{
+				parent[v] = u;
+				key[v] = graph[u][v];
+			}
+		}
+	}
+	// Print the constructed MST
+	printf("Edge \tWeight\n");
+	for (int i = 1; i < V; i++) 
+	{
+		printf("%d - %d \t%d\n", parent[i], i, graph[i][parent[i]]);
+		cost += graph[i][parent[i]];
+	}
+	printf("Total Cost: %d\n", cost);
+}
+int main() 
+{
+	int graph[V][V] = {
+		{0, 2, 0, 6, 0},
+		{2, 0, 3, 8, 5},
+		{0, 3, 0, 0, 7},
+		{6, 8, 0, 0, 9},
+		{0, 5, 7, 9, 0}
+	};
+	primMST(graph);
+	return 0;
+}
+
+
+
+
+
+//Quick sort
+
+#include <stdio.h>
+int Partition(int a[], int low, int high)
+{
+    int i = low + 1, j = high;
+    int key = a[low], temp;
+
+    while (1)
+    {
+        while (i <= high && a[i] <= key)
+            i++;
+        while (j >= low && a[j] > key)
+            j--;
+
+        if (i >= j)
+            break;
+
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+
+    temp = a[low];
+    a[low] = a[j];
+    a[j] = temp;
+
+    return j;
+}
+void QuickSort(int a[], int low, int high)
+{
+    if (low >= high)
+        return;
+
+    int mid = Partition(a, low, high);
+    QuickSort(a, low, mid - 1);
+    QuickSort(a, mid + 1, high);
+}
+int main()
+{
+    int a[100], n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    QuickSort(a, 0, n - 1);
+
+    printf("The array after sorting is: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+//Topological ordering
+
+#include <stdio.h>  
+const int MAX = 10;  
+void fnTopological(int a[MAX][MAX], int n);  
+void main()  
+{  
+	int a[MAX][MAX],n;  
+	int i,j;  
+	printf("Topological Sorting Algorithm -\n");  
+	printf("\nEnter the number of vertices : ");  
+	scanf("%d",&n);  
+	printf("Enter the adjacency matrix:\n");  
+	for (i=0; i<n; i++)   
+		for (j=0; j<n; j++)  
+			scanf("%d",&a[i][j]);  
+	fnTopological(a,n);  
+	printf("\n");  
+}  
+void fnTopological(int a[MAX][MAX], int n)  
+{  
+int in[MAX], out[MAX], stack[MAX], top=-1;  
+int i,j,k=0;  
+for (i=0;i<n;i++)  
+  {  
+        in[i] = 0;  
+        for (j=0; j<n; j++)  
+            if (a[j][i] == 1)  
+                in[i]++;  
+    }  
+    while(1)  
+    {  
+        for (i=0;i<n;i++)  
+        {  
+            if (in[i] == 0)  
+            {  
+                stack[++top] = i;  
+                in[i] = -1;  
+            }  
+        }  
+        if (top == -1)  
+            break;  
+        out[k] = stack[top--];  
+        for (i=0;i<n;i++)  
+        {  
+            if (a[out[k]][i] == 1)  
+                in[i]--;  
+        }  
+        k++;  
+    }  
+    printf("Topological Sorting as follows:- \n");  
+    for (i=0;i<k;i++)  
+        printf("%d ",out[i] + 1);  
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
