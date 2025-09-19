@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EXV7TVH2K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3EXV7TVH2K');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4th-Sem SVIT Notes – Downloads</title>
+  <title>4th Semester Notes Downloads – SVIT / VTU</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <h1>4th-Sem SVIT Notes</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="downloads.html" class="active">Downloads</a>
-      </nav>
-    </div>
-  </header>
+<!-- ===== HEADER ===== -->
+<header class="hero">
+  <h1>Download 4th Semester Notes</h1>
+  <p>CSE • AI & ML • DS • ISE — Sai Vidya Institute of Technology (VTU)</p>
+  <div class="header-actions">
+    <input type="text" id="searchInput" placeholder="Search PDFs…" class="search-bar">
+    <button id="darkModeToggle">🌙</button>
+  </div>
+</header>
 
-  <main>
+<!-- ===== DOWNLOAD CARDS ===== -->
+<main>
   <section class="subjects">
 
     <!-- ADA -->
@@ -37,17 +44,16 @@
         <a href="ADA/ADA-M3.pdf" class="pdf-box" download>Module 3</a>
         <a href="ADA/ADA-M4.pdf" class="pdf-box" download>Module 4</a>
         <a href="ADA/ADA-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="ADA/ADA-M5A.pdf" class="pdf-box" download>Module 5 Additional</a>
+        <a href="ADA/ADA-M5A.pdf" class="pdf-box" download>Module 5A</a>
         <a href="ADA/ADA-PYQ1.pdf" class="pdf-box" download>PYQ 1</a>
         <a href="ADA/ADA-PYQ2.pdf" class="pdf-box" download>PYQ 2</a>
         <a href="ADA/ADA-PYQ3.pdf" class="pdf-box" download>PYQ 3</a>
-        <a href="ADA/ADA-QP1.pdf" class="pdf-box" download>Question Paper 1</a>
-        <a href="ADA/ADA-MQP.pdf" class="pdf-box" download>Mini Project Questions</a>
+        <a href="ADA/ADA-QP1.pdf" class="pdf-box" download>QP 1</a>
+        <a href="ADA/ADA-MQP.pdf" class="pdf-box" download>MQP</a>
       </div>
-      <a class="btn" href="ADA/">All Files</a>
     </div>
 
-    <!-- Artificial Intelligence -->
+    <!-- AI -->
     <div class="card">
       <i class="fas fa-robot fa-3x"></i>
       <h2>Artificial Intelligence (AI)</h2>
@@ -57,27 +63,25 @@
         <a href="AI/AI-M3.pdf" class="pdf-box" download>Module 3</a>
         <a href="AI/AI-M4.pdf" class="pdf-box" download>Module 4</a>
         <a href="AI/AI-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="AI/AI-PYQ.pdf" class="pdf-box" download>Previous Year Questions</a>
-        <a href="AI/AI-MQP.pdf" class="pdf-box" download>Mini Project Questions</a>
-        <a href="AI/AI-QPS.pdf" class="pdf-box" download>All Question Papers</a>
+        <a href="AI/AI-PYQ.pdf" class="pdf-box" download>PYQ</a>
+        <a href="AI/AI-MQP.pdf" class="pdf-box" download>MQP</a>
+        <a href="AI/AI-QPS.pdf" class="pdf-box" download>QPS</a>
       </div>
-      <a class="btn" href="AI/">All Files</a>
     </div>
 
-    <!-- Biology for Engineers -->
+    <!-- BIOLOGY -->
     <div class="card">
       <i class="fas fa-dna fa-3x"></i>
       <h2>Biology for Engineers</h2>
       <div class="pdf-container">
+        <a href="BIOLOGY/BIO-IMP-QS.pdf" class="pdf-box" download>Important Questions</a>
         <a href="BIOLOGY/BIO-M1.pdf" class="pdf-box" download>Module 1</a>
         <a href="BIOLOGY/BIO-M2.pdf" class="pdf-box" download>Module 2</a>
         <a href="BIOLOGY/BIO-M3.pdf" class="pdf-box" download>Module 3</a>
         <a href="BIOLOGY/BIO-M4.pdf" class="pdf-box" download>Module 4</a>
         <a href="BIOLOGY/BIO-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="BIOLOGY/BIO-PYQ.pdf" class="pdf-box" download>Previous Year Questions</a>
-        <a href="BIOLOGY/BIO-IMP-QS.pdf" class="pdf-box" download>Important Questions</a>
+        <a href="BIOLOGY/BIO-PYQ.pdf" class="pdf-box" download>PYQ</a>
       </div>
-      <a class="btn" href="BIOLOGY/">All Files</a>
     </div>
 
     <!-- DBMS -->
@@ -90,16 +94,15 @@
         <a href="DBMS/DBMS-M3.pdf" class="pdf-box" download>Module 3</a>
         <a href="DBMS/DBMS-M4.pdf" class="pdf-box" download>Module 4</a>
         <a href="DBMS/DBMS-M5.pdf" class="pdf-box" download>Module 5</a>
-        <a href="DBMS/DBMS-M5-QB.pdf" class="pdf-box" download>Module 5 Question Bank</a>
-        <a href="DBMS/DBMS-PYQ.pdf" class="pdf-box" download>Previous Year Questions</a>
-        <a href="DBMS/DBMS-MQP.pdf" class="pdf-box" download>Mini Project Questions</a>
+        <a href="DBMS/DBMS-M5-QB.pdf" class="pdf-box" download>Module 5 QB</a>
+        <a href="DBMS/DBMS-PYQ.pdf" class="pdf-box" download>PYQ</a>
+        <a href="DBMS/DBMS-MQP.pdf" class="pdf-box" download>MQP</a>
       </div>
-      <a class="btn" href="DBMS/">All Files</a>
     </div>
 
-    <!-- Discrete Mathematical Structures -->
+    <!-- DMS -->
     <div class="card">
-      <i class="fas fa-square-root-alt fa-3x"></i>
+      <i class="fas fa-calculator fa-3x"></i>
       <h2>Discrete Mathematical Structures (DMS)</h2>
       <div class="pdf-container">
         <a href="DMS/DMS-M1.pdf" class="pdf-box" download>Module 1</a>
@@ -109,36 +112,54 @@
         <a href="DMS/DMS-PYQ.pdf" class="pdf-box" download>PYQ 1</a>
         <a href="DMS/DMS-PYQ2.pdf" class="pdf-box" download>PYQ 2</a>
         <a href="DMS/DMS-PYQ3.pdf" class="pdf-box" download>PYQ 3</a>
-        <a href="DMS/DMS-MQP.pdf" class="pdf-box" download>Mini Project Questions</a>
-        <a href="DMS/DMS-MPQ-S.pdf" class="pdf-box" download>Special Mini Project Questions</a>
+        <a href="DMS/DMS-MQP.pdf" class="pdf-box" download>MQP</a>
+        <a href="DMS/DMS-MPQ-S.pdf" class="pdf-box" download>MPQ-S</a>
       </div>
-      <a class="btn" href="DMS/">All Files</a>
     </div>
 
-    <!-- Universal Human Values -->
+    <!-- UHV -->
     <div class="card">
       <i class="fas fa-heart fa-3x"></i>
       <h2>Universal Human Values (UHV)</h2>
       <div class="pdf-container">
         <a href="UHV/BUHK408.pdf" class="pdf-box" download>Module Notes</a>
-        <a href="UHV/BUHK408-regular-paper.pdf" class="pdf-box" download>Regular Question Paper</a>
-        <a href="UHV/UHV-IMP.pdf" class="pdf-box" download>Important Notes</a>
+        <a href="UHV/BUHK408-regular-paper.pdf" class="pdf-box" download>Regular Paper</a>
+        <a href="UHV/UHV-IMP.pdf" class="pdf-box" download>Important</a>
         <a href="UHV/UHV-MOD-1.pdf" class="pdf-box" download>Module 1</a>
         <a href="UHV/UHV-MOD-2.pdf" class="pdf-box" download>Module 2</a>
         <a href="UHV/UHV-MOD-3.pdf" class="pdf-box" download>Module 3</a>
         <a href="UHV/UHV-MOD-4.pdf" class="pdf-box" download>Module 4</a>
         <a href="UHV/UHV-MOD-5.pdf" class="pdf-box" download>Module 5</a>
       </div>
-      <a class="btn" href="UHV/">All Files</a>
     </div>
 
-  
   </section>
 </main>
-  <footer class="site-footer">
-    <p>&copy; 2025 SVIT. All rights reserved. Developed by hammidbinaejaz</p>
-  </footer>
 
-  <script src="script.js"></script>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; 2025 SVIT. Developed by Hammid Bin Aejaz</p>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Dark Mode toggle
+  const darkModeBtn = document.getElementById('darkModeToggle');
+  darkModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+
+  // Search filter
+  const searchInput = document.getElementById('searchInput');
+  const pdfBoxes = document.querySelectorAll('.pdf-box');
+  searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase();
+    pdfBoxes.forEach(box => {
+      box.style.display = box.textContent.toLowerCase().includes(filter) ? 'inline-block' : 'none';
+    });
+  });
+</script>
+
 </body>
 </html>
